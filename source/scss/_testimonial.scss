@@ -1,0 +1,15 @@
+.reviews {
+  &__page {
+    margin-top: -20px;
+    padding-top: 25px;
+  }
+}
+
+.reviews .breadcrumb li {
+  color: #fff;
+}
+.reviews ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: #FFF;
+  content: "/ ";
+}

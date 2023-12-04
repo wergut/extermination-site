@@ -1,0 +1,34 @@
+// Global SCSS-files imports
+@import 'vars';
+@import 'reset';
+@import 'fonts';
+@import 'global';
+
+// Sections or Pages SCSS-files imports
+@import 'header';
+@import 'hero';
+@import 'services';
+@import 'calc';
+@import 'step';
+@import 'works';
+@import 'price';
+@import 'reviews';
+@import 'health';
+@import 'article';
+@import 'about-article';
+@import 'faq';
+@import 'footer';
+@import 'contact';
+@import 'drugs';
+@import 'testimonial';
+@import 'certificate';
+@import 'expert';
+@import 'work';
+@import 'opening';
+@import 'stock';
+@import 'attendance';
+@import 'blog';
+@import 'services';
+
+// Libs
+// @import './libs/swiper';

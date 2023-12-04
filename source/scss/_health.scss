@@ -1,0 +1,161 @@
+.health {
+  background-color: $colorYellowLight;
+  padding: 100px 0;
+  position: relative;
+
+		// .health__inner
+		&__inner {
+      padding: 0 90px;
+			display: flex;
+      margin: 0 auto;
+			@media screen and (max-width: 768px){
+				flex-wrap: wrap;
+        padding: 0;
+			}
+
+		}
+		&__left {
+			min-width: 700px;
+			@media screen and (max-width: 768px){
+				flex-basis: 100%;
+				min-width: 100%;
+				padding-top: 0;
+			}
+		}
+		&__right {
+      margin-left: -20%;
+      margin-top: -5%;
+      @media screen and (max-width: 768px){
+				flex-basis: 100%;
+				margin-left: 0;
+				img {
+					@media screen and (max-width: 768px){
+						width: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+
+		// .health__image
+
+		&__image {
+      position: absolute;
+      left: 0;
+      top: 22%;
+      @media (max-width: 1540px) {
+        left: -20px;
+        max-width: 209px;
+        top: 26%;
+      }
+      @media (max-width: 1450px) {
+        max-width: 179px;
+        top: 32%;
+      }
+      @media (max-width: 1400px) {
+        left: -7%;
+      }
+			@media screen and (max-width: 768px){
+        width: 39px;
+        left: -8%;
+        top: -45px;
+        height: 46px;
+			}
+		}
+
+		// .health__title
+
+		&__title {
+      color: $colorBlack;
+      font-size: clamp(30px, 8vw, 55px);
+      font-weight: 800;
+      line-height: 105%;
+			max-width: 800px;
+      margin-bottom: 25px;
+		}
+
+		// .health__fill
+
+		&__fill {
+      color: $colorRed;
+		}
+
+		// .health__descr
+
+		&__descr {
+      max-width: 384px;
+      margin-bottom: 26px;
+		}
+		&__wrap-input {
+			@media screen and (max-width: 768px){
+				display: flex;
+			flex-direction: column;
+        gap: 10px;
+			}
+		}
+		&__input-wrap {
+			@media screen and (max-width: 768px){
+				display: flex;
+			}
+		}
+		&__input {
+			@media screen and (max-width: 768px){
+				width: 100%;
+			margin-bottom: 10px;
+			}
+		}
+		&__form-box {
+			@media screen and (max-width: 768px){
+				max-width: 100%;
+			}
+      form {
+
+        @media (max-width: 768px) {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+		}
+		&__form {
+			@media screen and (max-width: 768px){
+				max-width: 300px;
+			}
+		}
+		&__submit {
+			@media screen and (max-width: 768px){
+				width: 100%;
+			}
+		}
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .health__image {
+    display: none;
+  }
+  .health__right {
+    margin-left: -40%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .health__inner {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .health {
+    padding: 60px 0;
+  }
+  .health__title {
+    margin-bottom: 15px;
+  }
+  .health__descr {
+    margin-bottom: 15px;
+  }
+  .health__form-box {
+    input {
+      width: 100%;
+    }
+  }
+}

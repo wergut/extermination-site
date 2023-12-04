@@ -1,0 +1,329 @@
+.hero {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  @media screen and (max-width: 768px){
+    padding-bottom: 0;
+  }
+
+  // .hero__inner
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (max-width: 768px){
+      flex-direction: column;
+    }
+  }
+  &__left {
+    width: 490px;
+    margin-right: 30px;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    @media screen and (max-width: 768px){
+      width: fit-content;
+      margin-right: 0;
+    }
+  }
+  &__right {
+    width: calc(100% - 490px - 30px);
+    height: 100%;
+    img {
+      margin-left: 10px;
+    }
+    @media screen and (max-width: 768px){
+      width: 100%;
+      img {
+        width: 100%;
+        object-fit: cover;
+
+      }
+    }
+
+  }
+  &__form-block {
+    @media screen and (max-width: 768px){
+      padding: 20px 0;
+      margin: 0 auto;
+    }
+  }
+
+  // .hero__title
+
+  &__title {
+    margin: 0;
+    font-size: clamp(35px, 8vw, 65px);
+    color: $colorYellow;
+    font-weight: 900;
+    line-height: 105%;
+  }
+
+  // .hero__descr
+
+  &__descr {
+    max-width: 384px;
+    color: $colorGray;
+    line-height: 148%;
+    margin: 25px 0 35px;
+  }
+
+  // .hero__form-title
+
+  &__form-title {
+    color: $colorYellow;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 130%;
+    margin-bottom: 20px;
+  }
+  &__wrap-input {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 10px;
+    @media screen and (max-width: 768px){
+      flex-direction: column;
+    }
+  }
+  // .hero__input
+
+  &__input {
+    border: none;
+    width: 162px;
+    padding: 13px 15px;
+    border-radius: 5px;
+    background: #F2F5F7;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.08);
+    height: 45px;
+    &::placeholder {
+      color: $colorGray;
+    }
+    @media screen and (max-width: 768px){
+      width: 300px;
+      margin-bottom: 20px;
+    }
+  }
+  &__submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 50px;
+    height: 45px;
+    background: $colorRed;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.13);
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 130%;
+    max-width: 155px;
+    cursor: pointer;
+    @media screen and (max-width: 768px){
+      justify-content: center;
+    }
+  }
+  // .hero__agree
+
+  &__agree {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+  &__agree-text {
+    color: $colorGray;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 140%;
+    b {
+      color: $colorGreen;
+    }
+  }
+  &__agree-link {
+    padding: 7px;
+  }
+
+  // .hero__steps
+
+  &__steps {
+    padding: 15px 0 23px 0;
+    background-color: $colorBraun;
+  }
+
+  // .hero__steps-list
+
+  &__steps-list {
+      color: #fff;
+    --gap: 39px;
+    --elements: 4;
+
+    max-width: 1230px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    @media screen and (max-width: 768px){
+      --elements: 1
+    }
+  }
+
+  // .hero__steps-item
+
+  &__steps-item {
+    // flex-basis: 279px;
+    width: calc((100% - (var(--elements) - 1) * var(--gap)) / (var(--elements)));
+    img {
+      margin-bottom: 4px;
+    }
+  }
+
+  // .hero__steps-text
+
+  &__steps-text {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 135%;
+  }
+}
+
+.hero__steps .hero__steps-back-text {
+  position: absolute;
+  left: 20px;
+  display: flex;
+  width: 100%;
+  z-index: 0;
+}
+
+.hero__steps .container {
+  z-index: 1;
+  position: relative;
+}
+
+.hero__steps .hero__steps-back-text span  {
+    color: #594144;
+    font-family: TT Firs Neue;
+    font-size: 65.47px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 85.111px */
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.checkbox {
+  margin-bottom: 0.2em;
+}
+
+/* для элемента input c type="checkbox" */
+.custom-checkbox>input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox>span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.custom-checkbox>span::before {
+  content: '';
+  display: inline-block;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+  border-color: $colorGreen;
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.custom-checkbox>input:not(:disabled):active+span::before {
+  background-color: #b3d7ff;
+  border-color: $colorGreen;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox>input:checked+span::before {
+
+  background-color: transparent;
+  border-color: $colorGreen;
+  background-image: url("../img/icons/check.svg");
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox>input:disabled+span::before {
+  background-color: #e9ecef;
+}
+
+.custom-checkbox-red > input:checked+span::before {
+  background-image: url(../img/icons/checkbox-red.svg);
+  border-color: $colorRed;
+}
+
+.custom-checkbox-red > span::before {
+  border-color: $colorRed;
+}
+
+.custom-checkbox-red > input:not(:disabled):not(:checked) + span:hover::before {
+  border-color: $colorRed;
+}
+
+.custom-checkbox-red span b {
+  color: $colorRed;
+  text-decoration: underline;
+}
+
+.hero__right.pc-hidden {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .hero__steps-list {
+    --elements: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__descr {
+    margin: 15px 0 20px;
+  }
+  .hero__right.pc-hidden {
+    display: block;
+  }
+  .hero__right.mobile-hidden {
+    display: none;
+  }
+  .hero__form-title {
+    margin-bottom: 16px;
+  }
+  .hero__form-block input {
+    width: 100%;
+  }
+  .hero__submit {
+    max-width: 100%;
+    width: 100%;
+  }
+  .hero__left {
+    padding-bottom: 0;
+  }
+  .hero__steps-list {
+    --elements: 1;
+  }
+  .hero__steps {
+    padding: 32px 0;
+  }
+}

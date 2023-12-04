@@ -1,0 +1,120 @@
+.services {
+  background-color: $colorYellowLight;
+  // .services__title
+
+  &__title {
+    color: $colorBlack;
+    font-size: clamp(30px, 8vw, 55px);
+    font-weight: 800;
+    line-height: 105%;
+    text-align: center;
+    margin-bottom: 50px;
+    @media screen and (max-width: 768px){
+      margin-bottom: 30px;
+    }
+  }
+
+  // .services__inner
+
+  &__inner {
+    --gap: 42px;
+    --elements: 2;
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    @media screen and (max-width: 768px){
+      --elements: 1;
+      gap: 24px;
+    }
+  }
+
+  // .services__item
+
+  &__item {
+    list-style: none;
+    width: calc((100% - (var(--elements) - 1) * var(--gap)) / (var(--elements)));
+    box-shadow: 0px 10px 15px rgba(9,11,15,0.07);
+    transition: all .3s ease-in-out;
+    @media screen and (max-width: 768px){
+     margin: 0 auto;
+    }
+    &:hover {
+      img {
+        transform: scale(1.05);
+        transition: .3s ease-in-out;
+      }
+      .services__item-text {
+        color: $colorRed;
+      }
+
+      .services__item-icon {
+        transform: translateX(5px);
+        transition: .3s ease-out;
+      }
+
+    }
+  }
+
+
+  // .services__item-link
+
+  &__item-link {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    padding: 36px 50px;
+    border-radius: 15px;
+    background: #FFF;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.07);
+    max-height: 55px;
+    transition: .2s ease-out;
+    .services__item-icon {
+      transition: inherit;
+      @media screen and (max-width: 768px){
+        width: 24px;
+        height: 24px;
+      }
+    }
+    @media screen and (max-width: 768px){
+      gap: 16px;
+      padding: 16px 16px;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+    }
+  }
+
+
+  // .services__item-text
+
+  &__item-text {
+    margin-right: auto;
+    color: $colorGray;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 130%;
+    transition: .3s ease-in-out;
+    @media screen and (max-width: 768px){
+      max-width: 240px;
+      font-size: 18px;
+      line-height: 120%;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .services__item-link {
+    padding: 26px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services__item-link {
+    padding: 18px 20px;
+  }
+}

@@ -1,0 +1,127 @@
+.attendance {
+  padding: 30px 0 50px;
+
+		// .attendance__inner
+
+		&__inner {
+		}
+
+		// .attendance__blocks
+
+		&__blocks {
+      display: flex;
+      padding-left: max(15px, calc((100% - 1530px) / 2));
+		}
+
+		// .attendance__left
+
+		&__left {
+      width: 490px;
+      margin-right: 40px;
+      flex-shrink: 0;
+		}
+    &__right {
+      width: calc(100% - 490px - 40px);
+      img {
+        border-radius: 10px;
+      }
+		}
+		// .attendance__title
+
+		&__title {
+      margin: 0;
+      color: $colorYellow;
+      font-size: 65px;
+      font-weight: 900;
+      line-height: 105%; 
+      margin-bottom: 25px;
+		}
+
+		// .attendance__descr
+
+		&__descr {
+      color: $colorGray;
+      max-width: 384px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 140%;
+      margin-bottom: 35px;
+		}
+
+		// .attendance__form-title
+
+		&__form-title {
+      color: $colorYellow;
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 130%; 
+      margin-bottom: 20px;
+		}
+
+		// .attendance__wrap-input
+
+		&__wrap-input {
+      display: flex;
+      gap: 10px;
+		}
+
+		// .attendance__input
+
+		&__input {
+      border: none;
+      width: 185px;
+      padding: 12px 15px;
+      border-radius: 5px;
+      background: #f2f5f7;
+      box-shadow: 0 4px 6px 0 rgba(0,0,0,.08);
+		}
+
+		// .attendance__submit
+
+		&__submit {
+      display: flex;
+      align-items: center;
+      border: none;
+      color: #fff;
+      padding: 16px 32px;
+      border-radius: 50px;
+      background: #ee5662;
+      box-shadow: 0 4px 6px 0 rgba(0,0,0,.13);
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 130%;
+      margin-bottom: 15px;
+      cursor: pointer;
+		}
+
+		// .attendance__agree
+
+		&__agree {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+		}
+
+		// .attendance__agree-check
+
+		&__agree-check {
+		}
+
+		// .attendance__agree-text
+
+		&__agree-text {
+      color: #575757;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 140%;
+		}
+
+		// .attendance__agree-link
+
+		&__agree-link {
+		}
+
+		// .attendance__right
+
+		
+}
