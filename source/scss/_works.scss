@@ -5,8 +5,11 @@
 		// .works__inner
 
 		&__inner {
-			max-width: 1552px;
 			margin: 0 auto;
+
+      .swiper-wrapper {
+        height: initial;
+      }
 		}
 		&__decor-image1 {
 			position: absolute;
@@ -20,7 +23,7 @@
 		}
 		&__decor-image2 {
 			position: absolute;
-      right: 20px;
+      right: 140px;
       top: -22px;
       @media screen and (max-width: 768px){
         width: 67px;
@@ -61,7 +64,6 @@
       border-radius: 15px;
       display: flex;
       flex-direction: column;
-      height: 387px;
 			@media screen and (max-width: 768px){
 				padding: 20px;
 				height: auto;
@@ -104,7 +106,7 @@
 		// .works__arrowbox
 
 		&__arrowbox {
-      margin-top: 30px;
+      margin-top: 40px;
       display: flex;
       justify-content: center;
       align-items: center;

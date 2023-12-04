@@ -1,26 +1,10 @@
 // Container
 .container {
-    max-width: ($containerWidth + $containerPadding) + px;
+  padding: 0 140px;
+}
 
-    margin: 0 auto;
-    padding: 0 $containerSidePadding + px;
-
-
-    @media (max-width: $breakpoint1450) {
-        max-width: 1230px;
-    }
-
-    @media (max-width: $breakpoint992) {
-        max-width: 970px;
-    }
-
-    @media (max-width: $breakpoint768) {
-        max-width: 740px;
-    }
-
-    @media (max-width: $breakpoint480) {
-        max-width: none;
-    }
+.swiper-wrapper {
+  height: initial;
 }
 
 // Body Locked
