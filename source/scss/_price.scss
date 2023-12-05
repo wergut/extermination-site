@@ -1,6 +1,7 @@
 .price {
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
   &__title {
     color: $colorBlack;
     font-size: clamp(30px, 8vw, 55px);
@@ -24,8 +25,6 @@
 .accordion {
   position: relative;
   @media screen and (max-width: 768px){
-    width: 90vw;
-    overflow-x: scroll;
     margin: 0 auto;
   }
   .accordion__item {
@@ -200,5 +199,8 @@
 @media (max-width: 768px) {
   .accordion .accordion__item .accordion__item-trigger {
     padding: 14px 0;
+  }
+  .decor-image {
+    display: none;
   }
 }

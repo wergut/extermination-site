@@ -225,6 +225,12 @@ ol.custom-list li::before {
     font-size: 30px;
   }
   .article__content--hidden {
-    height: 53em;
+    height: 52em;
+  }
+}
+
+@media (max-width: 576px) {
+  .article__content--hidden {
+    height: 49em;
   }
 }

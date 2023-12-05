@@ -156,4 +156,10 @@
   .step__item {
     gap: 0;
   }
+  .step__inner {
+    padding-left: 0;
+  }
+  .hero__steps .back-text-hero {
+    display: none;
+  }
 }

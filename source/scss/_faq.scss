@@ -7,6 +7,10 @@
 		&__inner {
       padding: 0 105px;
       margin: 0 auto;
+
+      @media (max-width: 992px) {
+        padding: 0;
+      }
 		}
 
 		// .faq__title
