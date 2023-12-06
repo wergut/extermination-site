@@ -140,10 +140,14 @@
       <div class="attendance__blocks">
         <div class="attendance__left">
           <h1 class="title attendance__title">Обработка квартиры от плесени</h1>
-          <p class="attendance__descr">
-            это система профессиональных санитарных и эпидемиологических действий, проводимых с целью уничтожения или удаления грибковых образований, называемых плесенью.
-          </p>
-
+          <div class="attendance__descr">
+            <p>
+              это система профессиональных санитарных и эпидемиологических действий, проводимых с целью уничтожения или удаления грибковых образований, называемых плесенью.
+            </p>
+          </div>
+          <div class="attendance__right attendance__right-mobile">
+            <img src="./img/attendance.jpg" alt="">
+          </div>
           <form action="" method="get">
           <p class="attendance__form-title">Заказать дезинфекцию</p>
           <div class="attendance__wrap-input">
@@ -161,21 +165,17 @@
           </div>
           <div class="attendance__agree">
             <div class="attendance__agree-check">
-              <img
-                loading="lazy"
-                src="./img/icons/check.svg"
-                width="20"
-                height="20"
-              />
+              <div class="checkbox">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="color-1" value="indigo">
+                  <span class="hero__agree-text">Соглашаюсь на обработку <b class="hero__agree-link"> персональных данных</b></span>
+                </label>
+              </div>
             </div>
-            <p class="attendance__agree-text">
-              Согласен на обработку
-              <span class="attendance__agree-link">персональных данных</span>
-            </p>
           </div>
           </form>
       </div>
-      <div class="attendance__right">
+      <div class="attendance__right attendance__right-pc">
         <img src="./img/attendance.jpg" alt="">
       </div>
       </div>
@@ -206,7 +206,618 @@
   </div>
 </section>
 
+      <section class="section price service-price">
+  <img loading="lazy" src="./img/price-bg.svg" class="price__bg-image">
+  <div class="container">
+    <h2 class="title price__title">Цены</h2>
 
+    <div class="price__inner">
+      <div class="table-wrapper">
+        <div class="table-wrapper-title">Обработка квартиры от плесени</div>
+        <div class="table_component" role="region" tabindex="0">
+          <table>
+            <thead>
+            <tr>
+              <th>Площадь обработки</th>
+              <th>Однократная обработка</th>
+              <th>Ежемесячная обработка</th>
+              <th>Ежемесячная обработка</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>до 50 кв.м.</td>
+              <td>от 1600 руб.</td>
+              <td>от 1400 руб.</td>
+              <td>от 1200 руб.</td>
+            </tr>
+            <tr>
+              <td>51 - 100 кв.м.</td>
+              <td>от 3200 руб.</td>
+              <td>от 3000 руб.</td>
+              <td>от 2800 руб.</td>
+            </tr>
+            <tr>
+              <td>101 - 300 кв.м.</td>
+              <td>от 4 200 руб.</td>
+              <td>от 4 000 руб.</td>
+              <td>от 3800 руб.</td>
+            </tr>
+            <tr>
+              <td>501 - 1 000 кв.м.</td>
+              <td>от 5200 руб.</td>
+              <td>от 5000 руб.</td>
+              <td>от 4800 руб.</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="section calc">
+  <div class="container">
+    <h2 class="calc__title title">Калькулятор</h2>
+    <div class="calc__inner">
+      <img src="./img/calc-bg.svg" alt="" class="calc__decor">
+      <div class="calc__item">
+        <span class="calc__select-name">Препарат:</span>
+      <div class="select">
+
+        <input class="select__input" type="hidden" name="">
+        <div class="select__head">Выберите</div>
+        <ul class="select__list" style="display: none;">
+            <li class="select__item">Дельта Зона</li>
+            <li class="select__item">К-Отрин СК 50</li>
+            <li class="select__item">Кукарача к.э.</li>
+            <li class="select__item">Сихлор</li>
+        </ul>
+      </div>
+    </div>
+    <div class="calc__item">
+      <span class="calc__select-name">Размер площади:</span>
+      <div class="select">
+
+        <input class="select__input" type="hidden" name="">
+        <div class="select__head">Выберите</div>
+        <ul class="select__list" style="display: none;">
+            <li class="select__item">до 50 m<sup>2</sup></li>
+            <li class="select__item">до 100 m<sup>2</sup></li>
+            <li class="select__item">до 150 m<sup>2</sup></li>
+            <li class="select__item">более 150 m<sup>2</sup></li>
+        </ul>
+      </div>
+    </div>
+    <div class="calc__item">
+      <span class="calc__select-name">Степень заражения:</span>
+      <div class="select">
+
+        <input class="select__input" type="hidden" name="">
+        <div class="select__head">Выберите</div>
+        <ul class="select__list" style="display: none;">
+            <li class="select__item">Легкая</li>
+            <li class="select__item">Средняя</li>
+            <li class="select__item">Тяжелая</li>
+        </ul>
+      </div>
+    </div>
+    <div class="calc__item calc__item-result">
+      <span class="calc__select-name">Итого:</span>
+      <p class="calc__result">≈ 4500  руб.</p>
+    </div>
+    <div class="calc__item">
+      <span class="calc__select-name">Отправьте нам заявку</span>
+      <form action="" method="get">
+        <div class="calc__wrap-input">
+        <div class="input-wrap">
+          <input type="text" name="phone" id="calc-number" placeholder="Ваш телефон" class="wpcf7-form-control" inputmode="text" required>
+        </div>
+        <button class="calc__submit btn-red" type="submit">Отправить</button>
+        </div>
+        <div class="checkbox">
+          <label class="custom-checkbox custom-checkbox-red">
+            <input type="checkbox" name="color-1" value="indigo">
+            <span class="hero__agree-text">Соглашаюсь на обработку <b class="hero__agree-link"> персональных данных</b></span>
+          </label>
+        </div>
+      </form>
+    </div>
+    </div>
+
+  </div>
+
+</section>
+
+      <section class="section drugs section-drugs">
+  <div class="container">
+    <h1 class="drugs__title title">Препараты</h1>
+    <div class="drugs__list">
+      <div class="drugs__item">
+        <div class="drugs__media">
+          <div class="drug-image">
+            <img loading="lazy" src="./img/drugs1.webp" class="drugs__image" width="168" height="246" alt="drugs">
+          </div>
+          <div class="drugs__properties">
+            <h4 class="drugs__name">Дельта Зона</h4>
+            <span class="drugs__descr">Состав:</span>
+            <span class="drugs__value">Производитель: Корея</span>
+            <span class="drugs__value">Вещество: 2,5% пиретроид дельтаметрин</span>
+            <span class="drugs__value">Емкость: 1000 мл.</span>
+            <buttton class="btn btn-red btn-pc drugs__btn">Выбрать</buttton>
+          </div>
+        </div>
+        <span class="drugs__descr">Описание:</span>
+        <p class="drugs__text">Инсектоакарицидный препарат для избавления от большинства видов насекомых в виде водной суспензии белого цвета, имеющей вязкую консистенцию,без запаха. Применяется в жилых, общественных, производственных постройках, в дошкольных и школьных учреждениях, на объектах пищепрома.. Продолжительность действия до 2 мес. Расход смеси: от 50 до 100 мл/м2.</p>
+        <buttton class="btn btn-red btn-mobile drugs__btn">Выбрать</buttton>
+      </div>
+
+      <div class="drugs__item">
+        <div class="drugs__media">
+          <div class="drug-image">
+            <img loading="lazy" src="./img/drugs2.webp" class="drugs__image" width="168" height="246" alt="drugs">
+          </div>
+          <div class="drugs__properties">
+            <h4 class="drugs__name">К-Отрин СК 50</h4>
+            <span class="drugs__descr">Состав:</span>
+            <span class="drugs__value">Производитель: Корея</span>
+            <span class="drugs__value">Вещество: 2,5% пиретроид дельтаметрин</span>
+            <span class="drugs__value">Емкость: 1000 мл.</span>
+            <buttton class="btn btn-red btn-pc drugs__btn">Выбрать</buttton>
+          </div>
+        </div>
+        <span class="drugs__descr">Описание:</span>
+        <p class="drugs__text">Средство инсектицидное выполнено в виде жидкости без аромата, имеющей белый или кремовый оттенок. Такая концентрированная суспензия предназначена для борьбы со всеми видами насекомых-паразитов. Чтобы сделать рабочую смесь, нужно от 1,2 мл до 6 мл суспензии размешать в одном литре воды. Для водостойкой поверхности расход – около 50 мл/м2 , а для покрытия, хорошо впитывающего влагу, – 100 мл/м2.</p>
+        <buttton class="btn btn-red btn-mobile drugs__btn">Выбрать</buttton>
+      </div>
+
+      <div class="drugs__item">
+        <div class="drugs__media">
+          <div class="drug-image">
+            <img loading="lazy" src="./img/drugs3.webp" class="drugs__image" width="168" height="246" alt="drugs">
+          </div>
+          <div class="drugs__properties">
+            <h4 class="drugs__name">Кукарача к.э.</h4>
+            <span class="drugs__descr">Состав:</span>
+            <span class="drugs__value">Производитель: Корея</span>
+            <span class="drugs__value">Вещество: 2,5% пиретроид дельтаметрин</span>
+            <span class="drugs__value">Емкость: 1000 мл.</span>
+            <buttton class="btn btn-red btn-pc drugs__btn">Выбрать</buttton>
+          </div>
+        </div>
+        <span class="drugs__descr">Описание:</span>
+        <p class="drugs__text">Средство инсектицидное для борьбы с разными разновидностями и насекомых в жилых зданиях, производственных помещениях, нежилых строениях. Препарат изготовлен в виде концентрированной жидкости светло-желтого оттенка. Эмульсию нужно разбавлять из расчета на 1 литр воды 0,3-5 гр. препарата. Готовой смеси необходимо от 0,05 л до 0,1 л на один м2 Препарат сберегает свою активность до 5 недель.</p>
+        <buttton class="btn btn-red btn-mobile drugs__btn">Выбрать</buttton>
+      </div>
+
+      <div class="drugs__item">
+        <div class="drugs__media">
+          <div class="drug-image">
+            <img loading="lazy" src="./img/drugs4.webp" class="drugs__image" width="168" height="246" alt="drugs">
+          </div>
+          <div class="drugs__properties">
+            <h4 class="drugs__name">Сихлор</h4>
+            <span class="drugs__descr">Состав:</span>
+            <span class="drugs__value">Производитель: Корея</span>
+            <span class="drugs__value">Вещество: 2,5% пиретроид дельтаметрин</span>
+            <span class="drugs__value">Емкость: 1000 мл.</span>
+            <buttton class="btn btn-red btn-pc drugs__btn">Выбрать</buttton>
+          </div>
+        </div>
+        <span class="drugs__descr">Описание:</span>
+        <p class="drugs__text">Средство инсектицидное выполнено в виде жидкости без аромата, имеющей белый или кремовый оттенок. Такая концентрированная суспензия предназначена для борьбы со всеми видами насекомых-паразитов. Чтобы сделать рабочую смесь, нужно от 1,2 мл до 6 мл суспензии размешать в одном литре воды. Для водостойкой поверхности расход – около 50 мл/м2 , а для покрытия, хорошо впитывающего влагу, – 100 мл/м2.</p>
+        <buttton class="btn btn-red btn-mobile drugs__btn">Выбрать</buttton>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="section article">
+	<div class="container">
+		<div class="article__grid">
+			<div class="article__left">
+				<div class="article__content article__content--hidden">
+
+					<h2>
+						Обработка помещений от насекомых в Москве
+					</h2>
+
+					<p>
+						С необходимостью избавиться от различных вредителей жители квартир и частных домов сталкиваются не так часто, как обитатели общежитий, владельцы хостелов или рабочих бытовок: в таких местах есть большая вероятность появления вредных насекомых, избавиться от которых поможет только дезинсекция.
+					</p>
+					<p>
+						С необходимостью избавиться от различных вредителей жители квартир и частных домов сталкиваются не так часто, как обитатели общежитий, владельцы хостелов или рабочих бытовок: в таких местах есть большая вероятность появления вредных насекомых, избавиться от которых поможет только дезинсекция.
+					</p>
+					<ul>
+						<li>Пункт 1</li>
+						<li>Пункт 2</li>
+						<li>Пункт 3</li>
+						<li>Пункт 4</li>
+						<li>Пункт 5</li>
+					</ul>
+					<p>
+						Отличие подобных мест в том, что они состоят из множества комнат, и часто кухни, санузлы являются также общими. При большом потоке людей и количестве проживающих поддерживать необходимую санитарную обстановку сложно: клопы, тараканы, блохи могут появиться незаметно, а размножаются они очень быстро.
+					</p>
+					<p>
+						Отличие подобных мест в том, что они состоят из множества комнат, и часто кухни, санузлы являются также общими. При большом потоке людей и количестве проживающих поддерживать необходимую санитарную обстановку сложно: клопы, тараканы, блохи могут появиться незаметно, а размножаются они очень быстро.
+					</p>
+          <p>
+						Отличие подобных мест в том, что они состоят из множества комнат, и часто кухни, санузлы являются также общими. При большом потоке людей и количестве проживающих поддерживать необходимую санитарную обстановку сложно: клопы, тараканы, блохи могут появиться незаметно, а размножаются они очень быстро.
+					</p>
+					<p>
+						Отличие подобных мест в том, что они состоят из множества комнат, и часто кухни, санузлы являются также общими. При большом потоке людей и количестве проживающих поддерживать необходимую санитарную обстановку сложно: клопы, тараканы, блохи могут появиться незаметно, а размножаются они очень быстро.
+					</p>
+          <p>
+						Отличие подобных мест в том, что они состоят из множества комнат, и часто кухни, санузлы являются также общими. При большом потоке людей и количестве проживающих поддерживать необходимую санитарную обстановку сложно: клопы, тараканы, блохи могут появиться незаметно, а размножаются они очень быстро.
+					</p>
+					<p>
+						Отличие подобных мест в том, что они состоят из множества комнат, и часто кухни, санузлы являются также общими. При большом потоке людей и количестве проживающих поддерживать необходимую санитарную обстановку сложно: клопы, тараканы, блохи могут появиться незаметно, а размножаются они очень быстро.
+					</p>
+
+				</div>
+				<button class="btn article__btn btn-red">Показать больше</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+      <section class="section works">
+  <img loading="lazy" src="./img/works-decor1.svg" class="works__decor-image1">
+  <div class="works__inner">
+  <div class="container">
+    <img loading="lazy" src="./img/works-decor2.svg" class="works__decor-image2">
+    <h2 class="works__title title">Наши работы</h2>
+    <div class="swiper-container works__swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide works__slide">
+          <div class="works__box">
+              <div class="works__media">
+                  <img loading="lazy" src="./img/works1.webp" class="works__image">
+                <a href="#" class="open-modal-dialog btn-open-img" data-src="modal-image"></a>
+              </div>
+              <div class="works__read">
+                Санобработка офисного помещения в Подмосковье
+              </div>
+
+          </div>
+      </div>
+      <div class="swiper-slide works__slide">
+        <div class="works__box">
+            <div class="works__media works__media__video">
+              <a href="#" class="open-modal-dialog btn-play-video" data-src="modal-video1"></a>
+              <img loading="lazy" src="./img/works1.webp" class="works__image">
+            </div>
+            <div class="works__read">
+              Дезинфекция районной больницы
+            </div>
+
+        </div>
+    </div>
+    <div class="swiper-slide works__slide">
+      <div class="works__box">
+          <div class="works__media">
+              <img loading="lazy" src="./img/works1.webp" class="works__image">
+            <a href="#" class="open-modal-dialog btn-play-video" data-src="modal-video1"></a>
+          </div>
+          <div class="works__read">
+            Санобработка офисного помещения в Подмосковье
+          </div>
+
+      </div>
+  </div>
+  <div class="swiper-slide works__slide">
+    <div class="works__box">
+        <div class="works__media">
+            <img loading="lazy" src="./img/works2.webp" class="works__image">
+          <a href="#" class="open-modal-dialog btn-open-img" data-src="modal-image"></a>
+        </div>
+        <div class="works__read">
+          Дезинфекция районной больницы
+        </div>
+
+    </div>
+</div>
+      </div>
+    </div>
+  </div>
+    <div class="works__arrowbox">
+
+      <div class="works__prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M14 7L9 12L14 17" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="11" transform="matrix(-1 0 0 1 24 0)" stroke="#2C2C2C" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="works__next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M14 7L9 12L14 17" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="11" transform="matrix(-1 0 0 1 24 0)" stroke="#2C2C2C" stroke-width="2"/>
+        </svg>
+      </div>
+  </div>
+  </div>
+</section>
+
+
+
+<div class="modal-dialog modal-dialog-centered modal-video1" style="display: none">
+  <div class="modal-content">
+    <div class="modal-body container-fluid">
+      <button type="button" class="modal-close d-none d-xl-inline-block" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+      <video controls src="./img/test-video.mp4"></video>
+    </div>
+  </div>
+</div>
+
+<div class="modal-dialog modal-dialog-centered modal-image" style="display: none">
+  <div class="modal-content">
+    <div class="modal-body container-fluid">
+      <button type="button" class="modal-close d-none d-xl-inline-block" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+      <img loading="lazy" src="./img/works2.webp" class="works__image">
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+
+    var modalButtons = document.querySelectorAll('.open-modal-dialog'),
+      overlay      = document.querySelector('body'),
+      closeButtons = document.querySelectorAll('.modal-dialog .modal-close');
+
+    /* open modal*/
+    modalButtons.forEach(function(modalBtn){
+      modalBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var modalId = this.getAttribute('data-src'),
+          modalElem = document.querySelector('.modal-dialog.'+modalId);
+        overlay.classList.add('modal-open');
+        modalElem.style.display = "block";
+        modalElem.classList.add('modal-opening');
+      }); // end click
+    }); // end foreach
+
+
+    /* close modal */
+    closeButtons.forEach(function(closeBtn) {
+      closeBtn.addEventListener('click', function (e) {
+        this.closest('.modal-dialog').style.display = "none";
+        overlay.classList.remove('modal-open');
+        this.closest('.modal-dialog').classList.remove('modal-opening');
+      })
+    });
+
+    document.querySelectorAll('.modal-dialog').forEach(function(item) {
+      item.addEventListener('click', function (e) {
+        if(e.target !== e.currentTarget) {
+          return
+        } else {
+          this.style.display = "none";
+          this.classList.remove('modal-opening');
+        }
+      })
+    });
+  });
+</script>
+
+      <section class="section reviews">
+
+  <div class="reviews__inner">
+    <img loading="lazy" src="./img/reviwes-decor1.svg" class="reviews__image-decor1">
+    <img loading="lazy" src="./img/reviwes-decor2.svg" class="reviews__image-decor2">
+  <div class="container">
+    <h2 class="reviews__title title">Отзывы</h2>
+    <div class="swiper-container reviews__swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide reviews__slide">
+          <div class="reviews__box">
+              <div class="reviews__media">
+                  <img loading="lazy" src="./img/reviews1.webp" class="reviews__image">
+                  <div class="reviews__media-body">
+                      <h5 class="reviews__name">Антон М.</h5>
+                      <div class="reviews__user-post">Дезинсекция квартиры</div>
+                  </div>
+              </div>
+              <div class="reviews__read">
+                Недавно заметила укусы на руках, оказалось покусали клопы. Я их заметила после того как стала осматривать квартиру. Облазила все форумы в интернете, но все же не рискнула бороться с ними самостоятельно народными средствами или пшыкалками разными, так как много людей писали, что все это не помогает.  Обратилась в службу Корпорация Дезинсекции. Ребята приехали все обработали, слава богу вывели эту нечисть! Спасибо огромное, особенно специалисту Владимиру.
+              </div>
+
+          </div>
+      </div>
+      <div class="swiper-slide reviews__slide">
+        <div class="reviews__box">
+            <div class="reviews__media">
+                <img loading="lazy" src="./img/reviews2.webp" class="reviews__image">
+                <div class="reviews__media-body">
+                    <h5 class="reviews__name">Антон М.</h5>
+                    <div class="reviews__user-post">Дезинсекция квартиры</div>
+                </div>
+            </div>
+            <div class="reviews__read">
+              Недавно заметила укусы на руках, оказалось покусали клопы. Я их заметила после того как стала осматривать квартиру. Облазила все форумы в интернете, но все же не рискнула бороться с ними самостоятельно народными средствами или пшыкалками разными, так как много людей писали, что все это не помогает.  Обратилась в службу Корпорация Дезинсекции. Ребята приехали все обработали, слава богу вывели эту нечисть! Спасибо огромное, особенно специалисту Владимиру.
+            </div>
+
+        </div>
+    </div>
+    <div class="swiper-slide reviews__slide">
+      <div class="reviews__box">
+          <div class="reviews__media">
+              <img loading="lazy" src="./img/reviews1.webp" class="reviews__image">
+              <div class="reviews__media-body">
+                  <h5 class="reviews__name">Антон М.</h5>
+                  <div class="reviews__user-post">Дезинсекция квартиры</div>
+              </div>
+          </div>
+          <div class="reviews__read">
+            Недавно заметила укусы на руках, оказалось покусали клопы. Я их заметила после того как стала осматривать квартиру. Облазила все форумы в интернете, но все же не рискнула бороться с ними самостоятельно народными средствами или пшыкалками разными, так как много людей писали, что все это не помогает.  Обратилась в службу Корпорация Дезинсекции. Ребята приехали все обработали, слава богу вывели эту нечисть! Спасибо огромное, особенно специалисту Владимиру.
+          </div>
+
+      </div>
+  </div>
+  <div class="swiper-slide reviews__slide">
+    <div class="reviews__box">
+        <div class="reviews__media">
+            <img loading="lazy" src="./img/reviews2.webp" class="reviews__image">
+            <div class="reviews__media-body">
+                <h5 class="reviews__name">Антон М.</h5>
+                <div class="reviews__user-post">Дезинсекция квартиры</div>
+            </div>
+        </div>
+        <div class="reviews__read">
+          Недавно заметила укусы на руках, оказалось покусали клопы. Я их заметила после того как стала осматривать квартиру. Облазила все форумы в интернете, но все же не рискнула бороться с ними самостоятельно народными средствами или пшыкалками разными, так как много людей писали, что все это не помогает.  Обратилась в службу Корпорация Дезинсекции. Ребята приехали все обработали, слава богу вывели эту нечисть! Спасибо огромное, особенно специалисту Владимиру.
+        </div>
+
+    </div>
+</div>
+      </div>
+    </div>
+    <div class="reviews__arrowbox">
+
+      <div class="reviews__prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M14 7L9 12L14 17" stroke="#FFD55B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="11" transform="matrix(-1 0 0 1 24 0)" stroke="#FFD55B" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="reviews__next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M14 7L9 12L14 17" stroke="#FFD55B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="11" transform="matrix(-1 0 0 1 24 0)" stroke="#FFD55B" stroke-width="2"/>
+        </svg>
+      </div>
+  </div>
+  </div>
+</div>
+</section>
+
+    <section class="section health">
+
+
+<div class="container health__container">
+  <div class="health__inner">
+    <div class="health__left">
+      <img loading="lazy" src="./img/decor-health1.svg" class="health__image">
+      <h2 class="health__title">Узнайте сколько стоят <span class="health__fill">Ваше спокойствие и здоровье</span></h2>
+      <div class="health__descr">Заполните форму, наш менеджер Вам перезвонит и сориентирует по стоимости обработки именно Вашей площади</div>
+      <div class="health__form-box">
+        <form class="health__form" action="" method="get">
+
+          <div class="hero__wrap-input health__wrap-input">
+          <div class="input-wrap health__input-wrap">
+            <input type="text" name="phone" id="number" placeholder="Ваш телефон" class="wpcf7-form-control" inputmode="text" required>
+          </div>
+          <button class="hero__submit health__submit btn-red" type="submit">Отправить</button>
+          </div>
+          <div class="checkbox">
+            <label class="custom-checkbox custom-checkbox-red">
+              <input type="checkbox" name="color-1" value="indigo">
+              <span class="hero__agree-text">Соглашаюсь на обработку <b class="hero__agree-link"> персональных данных</b></span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="health__right">
+      <img src="./img/bg-health.svg" alt="">
+    </div>
+  </div>
+</div>
+
+</section>
+
+      <section class="section faq">
+  <img loading="lazy" src="./img/faq-decor1.svg" class="faq__decor-image1">
+  <img loading="lazy" src="./img/faq-decor2.svg" class="faq__decor-image2">
+  <div class="faq__inner">
+  <div class="container">
+    <h2 class="faq__title title">Вопрос - ответ</h2>
+    <!-- Accordion -->
+<div class="accordion">
+  <div class="accordion__item accordion__item-faq">
+      <div class="accordion__item-trigger">
+
+          <div class="trigger__text trigger__text-faq">
+            Можно ли находиться в помещении во время проведения дезинфекции?
+          </div>
+          <div class="trigger__img">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="11" transform="matrix(4.37114e-08 1 1 -4.37114e-08 0 0)" stroke="#FFA522" stroke-width="2"/>
+              <path d="M7 10L12 15L17 10" stroke="#FFA522" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+      </div>
+      <div class="accordion__item-content">
+          <div class="content__text content__text-faq">
+            Дезинфектор проводит обработку в специальном влагозащитном костюме и профессиональном респираторе, как того требует техника безопасности для данного вида работ. Но не смотря на высокий профиль безопасности используемых химикатов, мы не рекомендуем заказчику находится в помещении на момент их распыления. Поскольку это может быть небезопасно для органов дыхания или кожных покровов, особенно для людей с отягощенным аллергическим анамнезом
+          </div>
+      </div>
+  </div>
+
+  <div class="accordion__item accordion__item-faq">
+      <div class="accordion__item-trigger">
+
+          <div class="trigger__text trigger__text-faq">Сколько времени длится обработка от насекомых в помещении?</div>
+          <div class="trigger__img">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="11" transform="matrix(4.37114e-08 1 1 -4.37114e-08 0 0)" stroke="#FFA522" stroke-width="2"/>
+              <path d="M7 10L12 15L17 10" stroke="#FFA522" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+      </div>
+      <div class="accordion__item-content">
+          <div class="content__text content__text-faq">
+            Дезинфектор проводит обработку в специальном влагозащитном костюме и профессиональном респираторе, как того требует техника безопасности для данного вида работ. Но не смотря на высокий профиль безопасности используемых химикатов, мы не рекомендуем заказчику находится в помещении на момент их распыления. Поскольку это может быть небезопасно для органов дыхания или кожных покровов, особенно для людей с отягощенным аллергическим анамнезом
+          </div>
+      </div>
+  </div>
+
+  <div class="accordion__item accordion__item-faq">
+      <div class="accordion__item-trigger">
+
+          <div class="trigger__text trigger__text-faq">Какие гарантии вы даёте?</div>
+          <div class="trigger__img">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="11" transform="matrix(4.37114e-08 1 1 -4.37114e-08 0 0)" stroke="#FFA522" stroke-width="2"/>
+              <path d="M7 10L12 15L17 10" stroke="#FFA522" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+      </div>
+      <div class="accordion__item-content">
+          <div class="content__text content__text-faq">
+            Дезинфектор проводит обработку в специальном влагозащитном костюме и профессиональном респираторе, как того требует техника безопасности для данного вида работ. Но не смотря на высокий профиль безопасности используемых химикатов, мы не рекомендуем заказчику находится в помещении на момент их распыления. Поскольку это может быть небезопасно для органов дыхания или кожных покровов, особенно для людей с отягощенным аллергическим анамнезом
+          </div>
+      </div>
+  </div>
+
+  <div class="accordion__item accordion__item-faq">
+    <div class="accordion__item-trigger">
+
+        <div class="trigger__text trigger__text-faq">Останется ли запах после дезинсекции?</div>
+        <div class="trigger__img">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="11" transform="matrix(4.37114e-08 1 1 -4.37114e-08 0 0)" stroke="#FFA522" stroke-width="2"/>
+            <path d="M7 10L12 15L17 10" stroke="#FFA522" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+    </div>
+    <div class="accordion__item-content">
+        <div class="content__text content__text-faq">
+          Дезинфектор проводит обработку в специальном влагозащитном костюме и профессиональном респираторе, как того требует техника безопасности для данного вида работ. Но не смотря на высокий профиль безопасности используемых химикатов, мы не рекомендуем заказчику находится в помещении на момент их распыления. Поскольку это может быть небезопасно для органов дыхания или кожных покровов, особенно для людей с отягощенным аллергическим анамнезом
+        </div>
+    </div>
+</div>
+</div>
+  </div>
+</div>
+</section>
 
 
 
@@ -242,11 +853,13 @@
                     <span>Получить скидку</span>
                 </button>
                 <div class="footer__messengers">
-                    Пишите, мы онлайн
+                    <span>Пишите, мы онлайн</span>
                     <a class="footer__whatsaap" href="tel:+79999999999">
                         <img loading="lazy" src="./img/icons/whatsap.svg" width="24" height="24" alt="Whatsapp">
-                        <img loading="lazy" src="./img/icons/telegram.svg" width="24" height="24" alt="Telegram">
                     </a>
+                  <a href="#" class="footer__telegram">
+                    <img loading="lazy" src="./img/icons/telegram.svg" width="24" height="24" alt="Telegram">
+                  </a>
                 </div>
                 <div class="footer__location">
                     <img loading="lazy" src="./img/icons/location.svg" width="24" height="24" alt="location">

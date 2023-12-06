@@ -402,6 +402,7 @@
           <div class="works__box">
               <div class="works__media">
                   <img loading="lazy" src="./img/works1.webp" class="works__image">
+                <a href="#" class="open-modal-dialog btn-open-img" data-src="modal-image"></a>
               </div>
               <div class="works__read">
                 Санобработка офисного помещения в Подмосковье
@@ -411,8 +412,9 @@
       </div>
       <div class="swiper-slide works__slide">
         <div class="works__box">
-            <div class="works__media">
-                <img loading="lazy" src="./img/works2.webp" class="works__image">
+            <div class="works__media works__media__video">
+              <a href="#" class="open-modal-dialog btn-play-video" data-src="modal-video1"></a>
+              <img loading="lazy" src="./img/works1.webp" class="works__image">
             </div>
             <div class="works__read">
               Дезинфекция районной больницы
@@ -424,7 +426,7 @@
       <div class="works__box">
           <div class="works__media">
               <img loading="lazy" src="./img/works1.webp" class="works__image">
-
+            <a href="#" class="open-modal-dialog btn-play-video" data-src="modal-video1"></a>
           </div>
           <div class="works__read">
             Санобработка офисного помещения в Подмосковье
@@ -436,6 +438,7 @@
     <div class="works__box">
         <div class="works__media">
             <img loading="lazy" src="./img/works2.webp" class="works__image">
+          <a href="#" class="open-modal-dialog btn-open-img" data-src="modal-image"></a>
         </div>
         <div class="works__read">
           Дезинфекция районной больницы
@@ -449,22 +452,94 @@
     <div class="works__arrowbox">
 
       <div class="works__prev">
-        <img loading="lazy" src="./img/icons/arrow-works-left.svg" class="image" width="30" height="30" alt="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M14 7L9 12L14 17" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="11" transform="matrix(-1 0 0 1 24 0)" stroke="#2C2C2C" stroke-width="2"/>
+        </svg>
       </div>
       <div class="works__next">
-          <div class="arrow-right">
-           <img loading="lazy" src="./img/icons/arrow-works-right.svg" class="image" width="30" height="30" >
-          </div>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M14 7L9 12L14 17" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="11" transform="matrix(-1 0 0 1 24 0)" stroke="#2C2C2C" stroke-width="2"/>
+        </svg>
       </div>
   </div>
   </div>
 </section>
 
+
+
+<div class="modal-dialog modal-dialog-centered modal-video1" style="display: none">
+  <div class="modal-content">
+    <div class="modal-body container-fluid">
+      <button type="button" class="modal-close d-none d-xl-inline-block" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+      <video controls src="./img/test-video.mp4"></video>
+    </div>
+  </div>
+</div>
+
+<div class="modal-dialog modal-dialog-centered modal-image" style="display: none">
+  <div class="modal-content">
+    <div class="modal-body container-fluid">
+      <button type="button" class="modal-close d-none d-xl-inline-block" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+      <img loading="lazy" src="./img/works2.webp" class="works__image">
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+
+    var modalButtons = document.querySelectorAll('.open-modal-dialog'),
+      overlay      = document.querySelector('body'),
+      closeButtons = document.querySelectorAll('.modal-dialog .modal-close');
+
+    /* open modal*/
+    modalButtons.forEach(function(modalBtn){
+      modalBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var modalId = this.getAttribute('data-src'),
+          modalElem = document.querySelector('.modal-dialog.'+modalId);
+        overlay.classList.add('modal-open');
+        modalElem.style.display = "block";
+        modalElem.classList.add('modal-opening');
+      }); // end click
+    }); // end foreach
+
+
+    /* close modal */
+    closeButtons.forEach(function(closeBtn) {
+      closeBtn.addEventListener('click', function (e) {
+        this.closest('.modal-dialog').style.display = "none";
+        overlay.classList.remove('modal-open');
+        this.closest('.modal-dialog').classList.remove('modal-opening');
+      })
+    });
+
+    document.querySelectorAll('.modal-dialog').forEach(function(item) {
+      item.addEventListener('click', function (e) {
+        if(e.target !== e.currentTarget) {
+          return
+        } else {
+          this.style.display = "none";
+          this.classList.remove('modal-opening');
+        }
+      })
+    });
+  });
+</script>
+
   <section class="section price">
   <img loading="lazy" src="./img/price-bg.svg" class="price__bg-image">
   <div class="container">
-    <h2 class="title price__title">Наши цены</h2>
+    <h2 class="title price__title">Цены</h2>
 
     <div class="price__inner">
       <!-- Accordion -->
@@ -764,13 +839,16 @@
     <div class="reviews__arrowbox">
 
       <div class="reviews__prev">
-        <img loading="lazy" src="./img/icons/arrow-left.svg" class="image" width="30" height="30" alt="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M14 7L9 12L14 17" stroke="#FFD55B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="11" transform="matrix(-1 0 0 1 24 0)" stroke="#FFD55B" stroke-width="2"/>
+        </svg>
       </div>
       <div class="reviews__next">
-          <div class="arrow-right">
-           <img loading="lazy" src="./img/icons/arrow-right.svg" class="image" width="30" height="30" >
-          </div>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M14 7L9 12L14 17" stroke="#FFD55B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="11" transform="matrix(-1 0 0 1 24 0)" stroke="#FFD55B" stroke-width="2"/>
+        </svg>
       </div>
   </div>
   </div>
@@ -856,24 +934,6 @@
 
 				</div>
 				<button class="btn article__btn btn-red">Показать больше</button>
-			</div>
-
-			<div class="article__right">
-				<div class="article__expert-wrap">
-					<div class="article__expert">
-						<div class="article__expert-title">Эксперты говорят:</div>
-						<div class="article__expert-inner">
-							<img loading="lazy" src="./img/reviews1.webp" class="article__expert-img" width="80" height="80" alt="">
-							<div class="article__expert-info">
-								<div class="article__expert-name">Иванов Иван Иванович</div>
-
-								<div class="article__expert-hint">Дезинфектор</div>
-
-								<a href="#" class="article__expert-link">Узнать все!!</a>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -998,11 +1058,13 @@
                     <span>Получить скидку</span>
                 </button>
                 <div class="footer__messengers">
-                    Пишите, мы онлайн
+                    <span>Пишите, мы онлайн</span>
                     <a class="footer__whatsaap" href="tel:+79999999999">
                         <img loading="lazy" src="./img/icons/whatsap.svg" width="24" height="24" alt="Whatsapp">
-                        <img loading="lazy" src="./img/icons/telegram.svg" width="24" height="24" alt="Telegram">
                     </a>
+                  <a href="#" class="footer__telegram">
+                    <img loading="lazy" src="./img/icons/telegram.svg" width="24" height="24" alt="Telegram">
+                  </a>
                 </div>
                 <div class="footer__location">
                     <img loading="lazy" src="./img/icons/location.svg" width="24" height="24" alt="location">
