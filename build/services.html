@@ -37,15 +37,15 @@
             <img class="header__messengers-img" src="./img/icons/telegram.svg" alt="Telegram">
           </a>
         </div>
-        <div class="header__phone-inner">
-          <a class="header__phone" href="tel:+78001002423">
+        <a href="tel:+78001002423"  class="header__phone-inner">
+          <div class="header__phone">
             <img class="header__messengers-img" src="./img/icons/phone.svg" alt="Phone">
-          </a>
+          </div>
           <div class="header__phone-box">
-            <a class="header__number">8 800 100-24-23</a>
+            <div class="header__number">8 800 100-24-23</div>
             <span class="header__number-text">Бесплатно и круглосуточно</span>
           </div>
-        </div>
+        </a>
       </div>
       <div class="header__feedback">
 
@@ -146,7 +146,7 @@
             </p>
           </div>
           <div class="attendance__right attendance__right-mobile">
-            <img src="./img/attendance.jpg" alt="">
+            <img src="./img/attendance.png" alt="">
           </div>
           <form action="" method="get">
           <p class="attendance__form-title">Заказать дезинфекцию</p>
@@ -176,7 +176,7 @@
           </form>
       </div>
       <div class="attendance__right attendance__right-pc">
-        <img src="./img/attendance.jpg" alt="">
+        <img src="./img/attendance.png" alt="">
       </div>
       </div>
     </div>
@@ -319,7 +319,7 @@
         <div class="checkbox">
           <label class="custom-checkbox custom-checkbox-red">
             <input type="checkbox" name="color-1" value="indigo">
-            <span class="hero__agree-text">Соглашаюсь на обработку <b class="hero__agree-link"> персональных данных</b></span>
+            <span class="hero__agree-text">Соглашаюсь на обработку <a href="#" class="hero__agree-link"> персональных данных</a></span>
           </label>
         </div>
       </form>
@@ -471,10 +471,10 @@
     <div class="swiper-container works__swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide works__slide">
-          <div class="works__box">
-              <div class="works__media">
+          <div class="works__box ">
+              <div class="works__media open-modal-dialog" data-src="modal-image">
                   <img loading="lazy" src="./img/works1.webp" class="works__image">
-                <a href="#" class="open-modal-dialog btn-open-img" data-src="modal-image"></a>
+                <div class="btn-open-img"></div>
               </div>
               <div class="works__read">
                 Санобработка офисного помещения в Подмосковье
@@ -484,8 +484,8 @@
       </div>
       <div class="swiper-slide works__slide">
         <div class="works__box">
-            <div class="works__media works__media__video">
-              <a href="#" class="open-modal-dialog btn-play-video" data-src="modal-video1"></a>
+            <div class="works__media works__media__video open-modal-dialog" data-src="modal-video1">
+              <div class="btn-play-video"></div>
               <img loading="lazy" src="./img/works1.webp" class="works__image">
             </div>
             <div class="works__read">
@@ -496,9 +496,9 @@
     </div>
     <div class="swiper-slide works__slide">
       <div class="works__box">
-          <div class="works__media">
+          <div class="works__media open-modal-dialog" data-src="modal-video1">
               <img loading="lazy" src="./img/works1.webp" class="works__image">
-            <a href="#" class="open-modal-dialog btn-play-video" data-src="modal-video1"></a>
+            <div class=" btn-play-video"></div>
           </div>
           <div class="works__read">
             Санобработка офисного помещения в Подмосковье
@@ -508,9 +508,9 @@
   </div>
   <div class="swiper-slide works__slide">
     <div class="works__box">
-        <div class="works__media">
+        <div class="works__media open-modal-dialog" data-src="modal-image">
             <img loading="lazy" src="./img/works2.webp" class="works__image">
-          <a href="#" class="open-modal-dialog btn-open-img" data-src="modal-image"></a>
+          <div class="btn-open-img" ></div>
         </div>
         <div class="works__read">
           Дезинфекция районной больницы
@@ -523,13 +523,13 @@
   </div>
     <div class="works__arrowbox">
 
-      <div class="works__prev">
+      <div class="works__prev slider-button-prev">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path d="M14 7L9 12L14 17" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <circle cx="12" cy="12" r="11" transform="matrix(-1 0 0 1 24 0)" stroke="#2C2C2C" stroke-width="2"/>
         </svg>
       </div>
-      <div class="works__next">
+      <div class="works__next slider-button-next">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path d="M14 7L9 12L14 17" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <circle cx="12" cy="12" r="11" transform="matrix(-1 0 0 1 24 0)" stroke="#2C2C2C" stroke-width="2"/>
@@ -563,50 +563,6 @@
   </div>
 </div>
 
-
-
-<script>
-
-  document.addEventListener('DOMContentLoaded', function() {
-
-    var modalButtons = document.querySelectorAll('.open-modal-dialog'),
-      overlay      = document.querySelector('body'),
-      closeButtons = document.querySelectorAll('.modal-dialog .modal-close');
-
-    /* open modal*/
-    modalButtons.forEach(function(modalBtn){
-      modalBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        var modalId = this.getAttribute('data-src'),
-          modalElem = document.querySelector('.modal-dialog.'+modalId);
-        overlay.classList.add('modal-open');
-        modalElem.style.display = "block";
-        modalElem.classList.add('modal-opening');
-      }); // end click
-    }); // end foreach
-
-
-    /* close modal */
-    closeButtons.forEach(function(closeBtn) {
-      closeBtn.addEventListener('click', function (e) {
-        this.closest('.modal-dialog').style.display = "none";
-        overlay.classList.remove('modal-open');
-        this.closest('.modal-dialog').classList.remove('modal-opening');
-      })
-    });
-
-    document.querySelectorAll('.modal-dialog').forEach(function(item) {
-      item.addEventListener('click', function (e) {
-        if(e.target !== e.currentTarget) {
-          return
-        } else {
-          this.style.display = "none";
-          this.classList.remove('modal-opening');
-        }
-      })
-    });
-  });
-</script>
 
       <section class="section reviews">
 
@@ -681,13 +637,13 @@
     </div>
     <div class="reviews__arrowbox">
 
-      <div class="reviews__prev">
+      <div class="reviews__prev slider-button-prev slider-button-yellow">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path d="M14 7L9 12L14 17" stroke="#FFD55B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <circle cx="12" cy="12" r="11" transform="matrix(-1 0 0 1 24 0)" stroke="#FFD55B" stroke-width="2"/>
         </svg>
       </div>
-      <div class="reviews__next">
+      <div class="reviews__next slider-button-next slider-button-yellow">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path d="M14 7L9 12L14 17" stroke="#FFD55B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <circle cx="12" cy="12" r="11" transform="matrix(-1 0 0 1 24 0)" stroke="#FFD55B" stroke-width="2"/>

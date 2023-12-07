@@ -37,15 +37,15 @@
             <img class="header__messengers-img" src="./img/icons/telegram.svg" alt="Telegram">
           </a>
         </div>
-        <div class="header__phone-inner">
-          <a class="header__phone" href="tel:+78001002423">
+        <a href="tel:+78001002423"  class="header__phone-inner">
+          <div class="header__phone">
             <img class="header__messengers-img" src="./img/icons/phone.svg" alt="Phone">
-          </a>
+          </div>
           <div class="header__phone-box">
-            <a class="header__number">8 800 100-24-23</a>
+            <div class="header__number">8 800 100-24-23</div>
             <span class="header__number-text">Бесплатно и круглосуточно</span>
           </div>
-        </div>
+        </a>
       </div>
       <div class="header__feedback">
 
@@ -142,8 +142,8 @@
 		<h1 class="certificate__title title">Сертификаты</h1>
 		<div class="swiper-container certificate__swiper">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide certificate__slide">
-					<div class="image-wrapper">
+        <div class="swiper-slide certificate__slide">
+          <div class="image-wrapper open-modal-dialog" data-src="modal-image">
             <img
               loading="lazy"
               src="./img/certificate-img.png"
@@ -151,9 +151,9 @@
               alt="certificate"
             />
           </div>
-				</div>
-				<div class="swiper-slide certificate__slide">
-          <div class="image-wrapper">
+        </div>
+        <div class="swiper-slide certificate__slide">
+          <div class="image-wrapper open-modal-dialog" data-src="modal-image">
             <img
               loading="lazy"
               src="./img/certificate-img.png"
@@ -161,9 +161,9 @@
               alt="certificate"
             />
           </div>
-				</div>
-				<div class="swiper-slide certificate__slide">
-          <div class="image-wrapper">
+        </div>
+        <div class="swiper-slide certificate__slide">
+          <div class="image-wrapper open-modal-dialog" data-src="modal-image">
             <img
               loading="lazy"
               src="./img/certificate-img.png"
@@ -171,9 +171,9 @@
               alt="certificate"
             />
           </div>
-				</div>
-				<div class="swiper-slide certificate__slide">
-          <div class="image-wrapper">
+        </div>
+        <div class="swiper-slide certificate__slide">
+          <div class="image-wrapper open-modal-dialog" data-src="modal-image">
             <img
               loading="lazy"
               src="./img/certificate-img.png"
@@ -181,34 +181,53 @@
               alt="certificate"
             />
           </div>
-				</div>
+        </div>
+        <div class="swiper-slide certificate__slide">
+          <div class="image-wrapper open-modal-dialog" data-src="modal-image">
+            <img
+              loading="lazy"
+              src="./img/certificate-img.png"
+              class="image"
+              alt="certificate"
+            />
+          </div>
+        </div>
+
 			</div>
 		</div>
 		<div class="certificate__arrowbox">
-			<div class="certificate__prev">
-				<img
-					loading="lazy"
-					src="./img/icons/arrow-works-left.svg"
-					class="image"
-					width="30"
-					height="30"
-					alt=""
-				/>
+			<div class="certificate__prev slider-button-prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M14 7L9 12L14 17" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="11" transform="matrix(-1 0 0 1 24 0)" stroke="#2C2C2C" stroke-width="2"/>
+        </svg>
 			</div>
-			<div class="certificate__next">
-				<div class="arrow-right">
-					<img
-						loading="lazy"
-						src="./img/icons/arrow-works-right.svg"
-						class="image"
-						width="30"
-						height="30"
-					/>
-				</div>
+			<div class="certificate__next slider-button-next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M14 7L9 12L14 17" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="11" transform="matrix(-1 0 0 1 24 0)" stroke="#2C2C2C" stroke-width="2"/>
+        </svg>
 			</div>
 		</div>
 	</div>
 </section>
+
+
+<div class="modal-dialog modal-dialog-centered modal-certificate modal-image" style="display: none">
+  <div class="modal-content">
+    <div class="modal-body container-fluid">
+      <button type="button" class="modal-close d-none d-xl-inline-block" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+      <img
+        loading="lazy"
+        src="./img/certificate-img.png"
+        class="image"
+        alt="certificate"
+      />
+    </div>
+  </div>
+</div>
 
 
 
