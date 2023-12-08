@@ -50,7 +50,7 @@
       <div class="header__feedback">
 
 
-        <button class="btn header__btn">
+        <button class="btn header__btn open-modal-dialog" data-src="modal-callback">
           <i class="btn__icon"><img loading="lazy" src="./img/icons/btn-icon.svg" width="24" height="24"></i>
           <span>Получить скидку</span>
         </button>
@@ -203,13 +203,13 @@
 
           <div class="hero__wrap-input health__wrap-input">
           <div class="input-wrap health__input-wrap">
-            <input type="text" name="phone" id="number" placeholder="Ваш телефон" class="wpcf7-form-control" inputmode="text" required>
+            <input type="text" name="phone" id="number" placeholder="Ваш телефон" class="wpcf7-form-control phone" inputmode="text" required>
           </div>
           <button class="hero__submit health__submit btn-red" type="submit">Отправить</button>
           </div>
           <div class="checkbox">
             <label class="custom-checkbox custom-checkbox-red">
-              <input type="checkbox" name="color-1" value="indigo">
+              <input type="checkbox" checked name="color-1" value="indigo">
               <span class="hero__agree-text">Соглашаюсь на обработку <b class="hero__agree-link"> персональных данных</b></span>
             </label>
           </div>
@@ -253,7 +253,7 @@
                         <span class="footer__number-text">Бесплатно и круглосуточно</span>
                     </div>
                 </a>
-                <button class="btn footer__btn">
+                <button class="btn footer__btn open-modal-dialog" data-src="modal-callback">
                     <i class="btn__icon"><img loading="lazy" src="./img/icons/btn-icon.svg" width="24" height="24"></i>
                     <span>Получить скидку</span>
                 </button>
@@ -315,6 +315,35 @@
     </div>
 </footer>
 
+
+
+<div class="modal-dialog modal-dialog-centered modal-callback" style="display: none">
+  <div class="modal-content">
+    <div class="modal-body container-fluid">
+      <button type="button" class="modal-close d-none d-xl-inline-block" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="modal-form-wrapper">
+        <div class="modal-form-title">Заказать звонок</div>
+        <div class="modal-form-description">
+          <p>Напишите свой телефон
+            и мы перезвоним</p>
+        </div>
+        <form action="">
+          <input type="text" name="name" placeholder="Ваше имя">
+          <input type="text" name="phone" class="phone" placeholder="Ваш телефон">
+          <input type="submit" class="btn-red btn-submit">
+          <div class="checkbox">
+            <label class="custom-checkbox">
+              <input type="checkbox" checked name="color-1" value="indigo">
+              <span class="hero__agree-text">Соглашаюсь на обработку <a href="#" class="hero__agree-link"> персональных данных</a></span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
